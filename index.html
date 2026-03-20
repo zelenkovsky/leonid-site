@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonid Zelenkovsky — Woodwind & Brass Teacher | Orchestra Director</title>
+  <meta name="description" content="Leonid Zelenkovsky — Music educator and conductor with over 40 years of experience teaching wind and brass instruments and directing ensembles in the San Francisco Bay Area.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Mobile Menu Toggle (CSS-only hamburger) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">LZ</a>
+
+      <ul class="nav-links">
+        <li><a href="#about"><span class="en">About</span><span class="ru">Обо мне</span></a></li>
+        <li><a href="#instruments"><span class="en">Instruments</span><span class="ru">Инструменты</span></a></li>
+        <li><a href="#experience"><span class="en">Experience</span><span class="ru">Опыт</span></a></li>
+        <li><a href="#awards"><span class="en">Awards</span><span class="ru">Награды</span></a></li>
+        <li><a href="#media"><span class="en">Media</span><span class="ru">Медиа</span></a></li>
+        <li><a href="#contact" class="nav-cta"><span class="en">Contact</span><span class="ru">Контакт</span></a></li>
+        <li><a href="https://margarita.zelenkovsky.com" class="nav-partner"><span class="en">See Margarita's Portfolio</span><span class="ru">Портфолио Маргариты</span></a></li>
+      </ul>
+
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+      </div>
+
+      <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><label for="nav-toggle"><a href="#about"><span class="en">About</span><span class="ru">Обо мне</span></a></label></li>
+        <li><label for="nav-toggle"><a href="#instruments"><span class="en">Instruments</span><span class="ru">Инструменты</span></a></label></li>
+        <li><label for="nav-toggle"><a href="#experience"><span class="en">Experience</span><span class="ru">Опыт</span></a></label></li>
+        <li><label for="nav-toggle"><a href="#awards"><span class="en">Awards</span><span class="ru">Награды</span></a></label></li>
+        <li><label for="nav-toggle"><a href="#media"><span class="en">Media</span><span class="ru">Медиа</span></a></label></li>
+        <li><label for="nav-toggle"><a href="#contact"><span class="en">Contact</span><span class="ru">Контакт</span></a></label></li>
+        <li><a href="https://margarita.zelenkovsky.com" class="nav-partner"><span class="en">See Margarita's Portfolio</span><span class="ru">Портфолио Маргариты</span></a></li>
+      </ul>
+      <div class="mobile-lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-decoration">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="hero-wave">
+        <path fill="rgba(212,168,67,0.07)" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,149.3C672,139,768,149,864,170.7C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/>
+      </svg>
+    </div>
+
+    <div class="hero-notes" aria-hidden="true">
+      <span class="note note-1">&#9835;</span>
+      <span class="note note-2">&#9834;</span>
+      <span class="note note-3">&#9833;</span>
+      <span class="note note-4">&#9839;</span>
+      <span class="note note-5">&#9835;</span>
+      <span class="note note-6">&#9834;</span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-greeting">
+        <span class="en">Welcome</span><span class="ru">Добро пожаловать</span>
+      </p>
+      <h1 class="hero-name">
+        <span class="en">Leonid Zelenkovsky</span><span class="ru">Леонид Зеленковский</span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-title">
+        <span class="en">Woodwind &amp; Brass Instruments Teacher<br><span class="hero-title-accent">Orchestra Director &amp; Conductor</span></span>
+        <span class="ru">Преподаватель духовых и медных инструментов<br><span class="hero-title-accent">Дирижёр оркестра</span></span>
+      </p>
+      <p class="hero-tagline">
+        <span class="en">40+ years shaping young musicians into award-winning performers</span>
+        <span class="ru">Более 40 лет воспитания молодых музыкантов — лауреатов международных конкурсов</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><span class="en">Get in Touch</span><span class="ru">Связаться</span></a>
+        <a href="#" class="btn btn-outline"><span class="en">Download Resume</span><span class="ru">Скачать резюме</span></a>
+      </div>
+    </div>
+
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="section-wave">
+      <path fill="var(--bg-primary)" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"/>
+    </svg>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title"><span class="en">About Me</span><span class="ru">Обо мне</span></h2>
+      <div class="section-title-line"></div>
+      <div class="about-grid">
+        <div class="about-portrait">
+          <div class="portrait-frame">
+            <div class="portrait-placeholder">
+              <svg viewBox="0 0 100 200" class="clef-icon">
+                <text x="50" y="140" text-anchor="middle" font-size="120" fill="rgba(212,168,67,0.3)" font-family="serif">&#119070;</text>
+              </svg>
+              <p class="portrait-label"><span class="en">Photo coming soon</span><span class="ru">Фото скоро будет</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="en">
+            <p class="about-lead">Music educator and conductor with <strong>over 40 years of experience</strong> teaching wind and brass instruments and directing ensembles.</p>
+            <p>Graduate of the Nizhny Novgorod State Conservatory with a degree in Trombone Performance and Conducting. Founder of a student symphony orchestra; many students have won international competitions and continued studies at leading conservatories.</p>
+            <p class="about-highlight">Currently relocating to the <strong>San Francisco Bay Area</strong>.</p>
+          </div>
+          <div class="ru">
+            <p class="about-lead">Музыкант-педагог и дирижёр с <strong>более чем 40-летним опытом</strong> преподавания духовых и медных инструментов и руководства ансамблями.</p>
+            <p>Выпускник Нижегородской государственной консерватории по специальности тромбон и дирижирование. Основатель ученического симфонического оркестра; многие ученики стали лауреатами международных конкурсов и продолжили обучение в ведущих консерваториях.</p>
+            <p class="about-highlight">Переезжает в район <strong>Сан-Франциско Bay Area</strong>.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">40+</span>
+              <span class="stat-label"><span class="en">Years Teaching</span><span class="ru">Лет опыта</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label"><span class="en">Instruments</span><span class="ru">Инструментов</span></span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label"><span class="en">Competition Winners</span><span class="ru">Лауреатов конкурсов</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations / Instruments Section -->
+  <section id="instruments" class="section specializations">
+    <div class="container">
+      <h2 class="section-title"><span class="en">Instruments I Teach</span><span class="ru">Инструменты, которые я преподаю</span></h2>
+      <div class="section-title-line"></div>
+      <p class="section-subtitle">
+        <span class="en">From the gentle warmth of the recorder to the bold power of the tuba — comprehensive wind and brass instruction for all levels.</span>
+        <span class="ru">От нежного звучания блокфлейты до мощи тубы — комплексное обучение духовым и медным инструментам для всех уровней.</span>
+      </p>
+      <div class="specializations-grid">
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127925;</div>
+          <h3><span class="en">Recorder</span><span class="ru">Блокфлейта</span></h3>
+          <p><span class="en">Ideal first instrument for young students — builds breath control and musical ear</span><span class="ru">Идеальный первый инструмент для юных учеников — развивает дыхание и музыкальный слух</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127926;</div>
+          <h3><span class="en">Flute</span><span class="ru">Флейта</span></h3>
+          <p><span class="en">Lyrical tone and breath mastery — classical and modern repertoire</span><span class="ru">Лирическое звучание и мастерство дыхания — классический и современный репертуар</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127927;</div>
+          <h3><span class="en">Clarinet</span><span class="ru">Кларнет</span></h3>
+          <p><span class="en">Rich, versatile woodwind voice — orchestra, chamber, and solo performance</span><span class="ru">Богатый, универсальный голос — оркестр, камерная и сольная игра</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127927;</div>
+          <h3><span class="en">Saxophone</span><span class="ru">Саксофон</span></h3>
+          <p><span class="en">Expressive range across all genres — jazz, classical, and contemporary</span><span class="ru">Выразительный диапазон во всех жанрах — джаз, классика, современная музыка</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127930;</div>
+          <h3><span class="en">Trumpet</span><span class="ru">Труба</span></h3>
+          <p><span class="en">Brilliant brass power and articulation — solo and ensemble technique</span><span class="ru">Блестящая мощь и артикуляция — сольная и ансамблевая техника</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127930;</div>
+          <h3><span class="en">Trombone</span><span class="ru">Тромбон</span></h3>
+          <p><span class="en">Primary instrument — conservatory-trained, 40+ years of performance and teaching</span><span class="ru">Основной инструмент — консерваторское образование, 40+ лет исполнительства и преподавания</span></p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon">&#127930;</div>
+          <h3><span class="en">Tuba</span><span class="ru">Туба</span></h3>
+          <p><span class="en">Foundation of the brass section — deep tone and ensemble anchoring</span><span class="ru">Основа медной группы — глубокий звук и опора ансамбля</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2 class="section-title"><span class="en">Professional Experience</span><span class="ru">Профессиональный опыт</span></h2>
+      <div class="section-title-line"></div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 — 2025</span>
+            <h3><span class="en">Music Teacher</span><span class="ru">Преподаватель музыки</span></h3>
+            <h4><span class="en">School of Arts on Petrogradskaya, Saint Petersburg</span><span class="ru">Школа искусств на Петроградской, Санкт-Петербург</span></h4>
+            <p><span class="en">Taught wind instruments to children and teenagers. Founded and directed the <em>"Saxophones on Petrogradskaya"</em> ensemble, creating a distinctive performance group showcasing student talent.</span><span class="ru">Преподавал духовые инструменты детям и подросткам. Основал и руководил ансамблем <em>«Саксофоны на Петроградской»</em>, создав яркий коллектив, раскрывающий таланты учеников.</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">1996 — 2023</span>
+            <h3><span class="en">Senior Music Teacher &amp; Head of Wind Department</span><span class="ru">Старший преподаватель и заведующий отделением духовых инструментов</span></h3>
+            <h4><span class="en">Children's School of Arts "Baltika"</span><span class="ru">Детская школа искусств «Балтика»</span></h4>
+            <p><span class="en">Led the wind instrument department for over two decades. Founded and conducted the <em>Baltika Student Symphony Orchestra</em>. Organized ensembles and concerts, mentoring students who went on to win international competitions and study at leading conservatories.</span><span class="ru">Руководил отделением духовых инструментов более двух десятилетий. Основал и дирижировал <em>ученическим симфоническим оркестром «Балтика»</em>. Организовывал ансамбли и концерты, воспитывая учеников-лауреатов международных конкурсов.</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">1984 — 1996</span>
+            <h3><span class="en">Wind Instruments Instructor &amp; Orchestra Conductor</span><span class="ru">Преподаватель духовых инструментов и дирижёр оркестра</span></h3>
+            <h4><span class="en">Balashov Music College</span><span class="ru">Балашовское музыкальное училище</span></h4>
+            <p><span class="en">Taught brass instruments and conducted the college wind orchestra, building a strong foundation of instrumental pedagogy and ensemble leadership.</span><span class="ru">Преподавал медные духовые инструменты и дирижировал духовым оркестром училища, формируя прочную основу инструментальной педагогики и руководства ансамблем.</span></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="education-block">
+        <h3 class="education-heading"><span class="en">Education</span><span class="ru">Образование</span></h3>
+        <div class="education-card">
+          <div class="edu-icon">&#127891;</div>
+          <div>
+            <h4><span class="en">Nizhny Novgorod State Conservatory</span><span class="ru">Нижегородская государственная консерватория</span></h4>
+            <p><span class="en">Degree in Trombone Performance and Conducting</span><span class="ru">Специальность: тромбон и дирижирование</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="skills-block">
+        <h3 class="skills-heading"><span class="en">Core Skills</span><span class="ru">Ключевые навыки</span></h3>
+        <div class="skills-list">
+          <span class="skill-tag"><span class="en">Ensemble &amp; Orchestra Direction</span><span class="ru">Руководство ансамблем и оркестром</span></span>
+          <span class="skill-tag"><span class="en">Music Arranging (Sibelius)</span><span class="ru">Аранжировка (Sibelius)</span></span>
+          <span class="skill-tag"><span class="en">Online Teaching (Zoom, Skype)</span><span class="ru">Онлайн-обучение (Zoom, Skype)</span></span>
+          <span class="skill-tag"><span class="en">Student Performance Preparation</span><span class="ru">Подготовка учеников к выступлениям</span></span>
+          <span class="skill-tag"><span class="en">Breath Control &amp; Sound Technique</span><span class="ru">Контроль дыхания и звукоизвлечение</span></span>
+          <span class="skill-tag"><span class="en">Youth Music Education</span><span class="ru">Музыкальное образование молодёжи</span></span>
+          <span class="skill-tag"><span class="en">Concert Programming</span><span class="ru">Концертное программирование</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section id="awards" class="section awards">
+    <div class="container">
+      <h2 class="section-title"><span class="en">Awards &amp; Recognition</span><span class="ru">Награды и признание</span></h2>
+      <div class="section-title-line"></div>
+      <div class="awards-grid">
+
+        <div class="award-card">
+          <div class="award-year">2022</div>
+          <h3><span class="en">Governor's Commendation</span><span class="ru">Благодарность губернатора</span></h3>
+          <p><span class="en">Governor's Commendation of Leningrad Oblast for outstanding professional service in music education.</span><span class="ru">Благодарность губернатора Ленинградской области за выдающуюся профессиональную деятельность в сфере музыкального образования.</span></p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2022</div>
+          <h3><span class="en">Honorary Diploma — Legislative Assembly</span><span class="ru">Почётная грамота — Законодательное собрание</span></h3>
+          <p><span class="en">Honorary Diploma of the Leningrad Oblast Legislative Assembly for significant contributions to music education.</span><span class="ru">Почётная грамота Законодательного собрания Ленинградской области за значительный вклад в музыкальное образование.</span></p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2019</div>
+          <h3><span class="en">Highest Professional Qualification</span><span class="ru">Высшая квалификационная категория</span></h3>
+          <p><span class="en">Awarded the Highest Professional Qualification Category, the top professional certification for music educators.</span><span class="ru">Присвоена высшая квалификационная категория — наивысшая профессиональная аттестация для педагогов музыки.</span></p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year"><span class="en">Multiple</span><span class="ru">Многократно</span></div>
+          <h3><span class="en">Education Committee Awards</span><span class="ru">Награды комитетов образования</span></h3>
+          <p><span class="en">Multiple awards from regional education committees recognizing professionalism, dedication, and contributions to student achievement.</span><span class="ru">Многочисленные награды региональных комитетов образования за профессионализм, преданность делу и вклад в достижения учеников.</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="section media">
+    <div class="container">
+      <h2 class="section-title"><span class="en">Performances &amp; Media</span><span class="ru">Выступления и медиа</span></h2>
+      <div class="section-title-line"></div>
+      <p class="section-subtitle">
+        <span class="en">Watch recordings of student performances, ensemble concerts, and teaching demonstrations.</span>
+        <span class="ru">Смотрите записи выступлений учеников, концертов ансамблей и педагогических демонстраций.</span>
+      </p>
+      <div class="media-grid">
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/bPzbYGNdBms" title="Baltika Symphony Orchestra — Jubilee Concert" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">Baltika Symphony Orchestra — Jubilee Concert</span><span class="ru">Симфонический оркестр «Балтика» — Юбилейный концерт</span></p>
+        </div>
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/teQLlKoWmQA" title="P. Desmond — Take Five (Saxophone)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">P. Desmond — Take Five (Saxophone)</span><span class="ru">П. Дезмонд — Take Five (саксофон)</span></p>
+        </div>
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/GqaPJhj9SzU" title="K. Jenkins — Palladio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">K. Jenkins — Palladio</span><span class="ru">К. Дженкинс — Палладио</span></p>
+        </div>
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/kDeoE7B37b4" title="Tchaikovsky — Swan Lake, Scene No.14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">Tchaikovsky — Swan Lake, Scene No.14</span><span class="ru">П.И. Чайковский — «Лебединое озеро», Сцена №14</span></p>
+        </div>
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/SGvaH3ix4FM" title="J. Kosma — Autumn Leaves" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">J. Kosma — Autumn Leaves</span><span class="ru">Ж. Косма — «Опавшие листья»</span></p>
+        </div>
+
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/HLIzdRB-BvE" title="Recorder Consort — Wood & Crystals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="video-caption"><span class="en">Recorder Consort — Wood &amp; Crystals</span><span class="ru">Консорт блокфлейт — Wood &amp; Crystals</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title"><span class="en">Get in Touch</span><span class="ru">Связаться</span></h2>
+      <div class="section-title-line"></div>
+      <p class="section-subtitle">
+        <span class="en">Interested in music lessons, ensemble coaching, or collaboration? I would love to hear from you.</span>
+        <span class="ru">Заинтересованы в уроках музыки, работе с ансамблем или сотрудничестве? Буду рад вашему обращению.</span>
+      </p>
+
+      <div class="contact-content">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22,4 L12,13 L2,4"/>
+            </svg>
+          </div>
+          <h3><span class="en">Email</span><span class="ru">Эл. почта</span></h3>
+          <a href="mailto:leonidzelenkovsky@gmail.com" class="contact-link">leonidzelenkovsky@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3><span class="en">Location</span><span class="ru">Местоположение</span></h3>
+          <p><span class="en">Relocating to San Francisco Bay Area, CA</span><span class="ru">Переезжает в район Сан-Франциско Bay Area, Калифорния</span></p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h3><span class="en">Resume</span><span class="ru">Резюме</span></h3>
+          <a href="#" class="contact-link"><span class="en">Download Resume (PDF)</span><span class="ru">Скачать резюме (PDF)</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-name"><span class="en">Leonid Zelenkovsky</span><span class="ru">Леонид Зеленковский</span></p>
+        <p class="footer-auth">
+          <span class="en">Authorized to work in the United States</span>
+          <span class="ru">Имеет право на работу в США</span>
+        </p>
+        <a href="https://margarita.zelenkovsky.com" class="footer-partner">
+          <span class="en">See Margarita's Portfolio</span>
+          <span class="ru">Портфолио Маргариты</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 <span class="en">Leonid Zelenkovsky. All rights reserved.</span><span class="ru">Леонид Зеленковский. Все права защищены.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      localStorage.setItem('preferred-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.lang-btn[data-lang="'+lang+'"]').forEach(b => b.classList.add('active'));
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('preferred-lang') || 'en';
+      setLang(saved);
+    });
+  </script>
+
+</body>
+</html>

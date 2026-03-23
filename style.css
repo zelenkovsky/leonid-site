@@ -1034,7 +1034,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   /* Show hamburger, hide desktop nav */
   .nav-hamburger {
     display: flex;
@@ -1047,7 +1047,9 @@ img {
   .lang-toggle {
     display: none;
   }
+}
 
+@media (max-width: 768px) {
   .navbar {
     padding: 0 16px;
   }

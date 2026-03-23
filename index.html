@@ -12,9 +12,6 @@
 </head>
 <body>
 
-  <!-- Mobile Menu Toggle (CSS-only hamburger) -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true">
-
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
@@ -35,30 +32,31 @@
         <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
       </div>
 
-      <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle menu">
+      <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileMenu()">
         <span></span>
         <span></span>
         <span></span>
-      </label>
-    </div>
-
-    <!-- Mobile overlay menu -->
-    <div class="mobile-nav">
-      <ul class="mobile-nav-links">
-        <li><label for="nav-toggle"><a href="#about"><span class="en">About</span><span class="ru">Обо мне</span></a></label></li>
-        <li><label for="nav-toggle"><a href="#instruments"><span class="en">Instruments</span><span class="ru">Инструменты</span></a></label></li>
-        <li><label for="nav-toggle"><a href="#experience"><span class="en">Experience</span><span class="ru">Опыт</span></a></label></li>
-        <li><label for="nav-toggle"><a href="#awards"><span class="en">Awards</span><span class="ru">Награды</span></a></label></li>
-        <li><label for="nav-toggle"><a href="#media"><span class="en">Media</span><span class="ru">Медиа</span></a></label></li>
-        <li><label for="nav-toggle"><a href="#contact"><span class="en">Contact</span><span class="ru">Контакт</span></a></label></li>
-        <li><a href="https://margarita.zelenkovsky.com" class="nav-partner"><span class="en">See Margarita's Portfolio</span><span class="ru">Портфолио Маргариты</span></a></li>
-      </ul>
-      <div class="mobile-lang-toggle">
-        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
-      </div>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile menu overlay (outside navbar to avoid stacking context issues) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" aria-label="Close menu" onclick="toggleMobileMenu()">&times;</button>
+    <ul class="mobile-menu-links">
+      <li><a href="#about" onclick="toggleMobileMenu()"><span class="en">About</span><span class="ru">Обо мне</span></a></li>
+      <li><a href="#instruments" onclick="toggleMobileMenu()"><span class="en">Instruments</span><span class="ru">Инструменты</span></a></li>
+      <li><a href="#experience" onclick="toggleMobileMenu()"><span class="en">Experience</span><span class="ru">Опыт</span></a></li>
+      <li><a href="#awards" onclick="toggleMobileMenu()"><span class="en">Awards</span><span class="ru">Награды</span></a></li>
+      <li><a href="#media" onclick="toggleMobileMenu()"><span class="en">Media</span><span class="ru">Медиа</span></a></li>
+      <li><a href="#contact" onclick="toggleMobileMenu()"><span class="en">Contact</span><span class="ru">Контакт</span></a></li>
+      <li><a href="https://margarita.zelenkovsky.com" class="nav-partner"><span class="en">See Margarita's Portfolio</span><span class="ru">Портфолио Маргариты</span></a></li>
+    </ul>
+    <div class="mobile-lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
@@ -405,7 +403,7 @@
             </svg>
           </div>
           <h3><span class="en">Resume</span><span class="ru">Резюме</span></h3>
-          <a href="#" class="contact-link"><span class="en">Download Resume (PDF)</span><span class="ru">Скачать резюме (PDF)</span></a>
+          <a href="Leonid_Zelenkovsky_CV.pdf" download class="contact-link"><span class="en">Download Resume (PDF)</span><span class="ru">Скачать резюме (PDF)</span></a>
         </div>
       </div>
     </div>
@@ -430,6 +428,10 @@
   </footer>
 
   <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
     function setLang(lang) {
       document.documentElement.setAttribute('data-lang', lang);
       localStorage.setItem('preferred-lang', lang);

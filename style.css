@@ -64,9 +64,6 @@ img {
 }
 
 /* --- Navigation --- */
-.nav-toggle-checkbox {
-  display: none;
-}
 
 .navbar {
   position: fixed;
@@ -74,7 +71,7 @@ img {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 15, 30, 0.92);
+  background: rgba(15, 15, 30, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(212, 168, 67, 0.15);
@@ -186,7 +183,9 @@ img {
   cursor: pointer;
   width: 28px;
   height: 28px;
-  z-index: 1001;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .nav-hamburger span {
@@ -198,77 +197,72 @@ img {
   transition: all 0.3s ease;
 }
 
-.nav-toggle-checkbox:checked ~ .navbar .nav-hamburger span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.nav-toggle-checkbox:checked ~ .navbar .nav-hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle-checkbox:checked ~ .navbar .nav-hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Nav Overlay */
-.mobile-nav {
+/* Mobile menu overlay (outside navbar) */
+.mobile-menu {
   display: none;
   position: fixed;
-  top: 64px;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(15, 15, 30, 0.98);
-  backdrop-filter: blur(16px);
+  width: 100%;
+  height: 100%;
+  background: #0f0f1e;
+  z-index: 10000;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 999;
+  gap: 2rem;
 }
 
-.mobile-nav-links {
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.mobile-close:hover {
+  color: var(--accent);
+}
+
+.mobile-menu-links {
   list-style: none;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
-.mobile-nav-links a {
-  font-size: 1.2rem;
+.mobile-menu-links a {
+  font-size: 1.15rem;
   font-weight: 500;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.mobile-nav-links a:hover {
+.mobile-menu-links a:hover {
   color: var(--accent);
-}
-
-.mobile-nav-links label {
-  cursor: pointer;
 }
 
 .mobile-lang-toggle {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .mobile-lang-toggle .lang-btn {
   padding: 8px 16px;
   font-size: 0.85rem;
-}
-
-.nav-toggle-checkbox:checked ~ .navbar .mobile-nav {
-  display: flex;
-  opacity: 1;
-  pointer-events: all;
 }
 
 /* --- Buttons --- */
@@ -359,9 +353,33 @@ img {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(170deg, var(--bg-primary) 0%, var(--bg-secondary) 40%, #1e1a30 100%);
+  background: var(--bg-primary);
   padding-top: 64px;
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('hero-bg.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(15,15,30,0.2) 0%, rgba(15,15,30,0.6) 60%, var(--bg-primary) 100%);
+  z-index: 1;
 }
 
 .hero-decoration {
@@ -370,6 +388,7 @@ img {
   left: 0;
   right: 0;
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero-wave {
@@ -383,6 +402,7 @@ img {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 2;
 }
 
 .note {
@@ -408,7 +428,7 @@ img {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 0 24px;
 }
 
@@ -1028,17 +1048,6 @@ img {
     display: none;
   }
 
-  .mobile-nav {
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .nav-toggle-checkbox:checked ~ .navbar .mobile-nav {
-    opacity: 1;
-    pointer-events: all;
-  }
-
   .navbar {
     padding: 0 16px;
   }
@@ -1086,6 +1095,10 @@ img {
 }
 
 @media (max-width: 480px) {
+  .hero::before {
+    background-attachment: scroll;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: center;

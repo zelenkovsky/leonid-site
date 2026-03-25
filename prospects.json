@@ -1564,5 +1564,23 @@
     "activeOpening": false,
     "openingDetails": "",
     "website": "https://www.novavista.org"
+  },
+  {
+    "id": 88,
+    "folder": "88-Svoimi-Slovami",
+    "name": "Своими Словами (Svoimi Slovami)",
+    "type": "Russian-Language Enrichment School",
+    "city": "Cupertino / San Francisco",
+    "address": "10300 S De Anza Blvd, Suite B, Cupertino, CA 95014",
+    "lat": 37.3215,
+    "lng": -122.034,
+    "email": "info@svoimislovami.com",
+    "phone": "+1 (408) 677-6262",
+    "website": "https://svoimislovami.com",
+    "fitScore": 4,
+    "forWhom": "Both",
+    "notes": "Russian-language school; music program has piano/choir but NO wind/brass; strong cultural match",
+    "activeOpening": false,
+    "openingDetails": ""
   }
 ]

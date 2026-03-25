@@ -165,23 +165,26 @@
       height: 40px;
       min-width: 40px;
       padding: 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .controls.collapsed .controls-toggle {
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 8px;
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     .controls.collapsed .controls-toggle span:first-child {
       display: none;
     }
     .controls.collapsed .controls-toggle .toggle-arrow {
-      font-size: 18px;
+      font-size: 20px;
+      color: #333;
       transform: none;
-    }
-    .controls.collapsed .controls-toggle {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-      justify-content: center;
     }
     .search-box {
       width: calc(100% - 70px);

@@ -76,6 +76,47 @@
   .popup-content .website { font-size: 12px; margin-top: 4px; }
   .popup-content a { color: #2980b9; }
   .legend-item { display: flex; align-items: center; gap: 6px; padding: 1px 0; }
+
+  /* Search box */
+  .search-box {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    z-index: 1000;
+    width: 320px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .search-box input::placeholder { color: #aaa; }
+  .search-box input:focus { box-shadow: 0 2px 14px rgba(0,0,0,0.3); }
+  .search-dropdown {
+    display: none;
+    margin-top: 4px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  .search-dropdown.active { display: block; }
+  .search-item {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+  }
+  .search-item:last-child { border-bottom: none; }
+  .search-item:hover, .search-item.selected { background: #e8f4f8; }
+  .search-item .s-name { font-weight: 500; color: #1a1a2e; }
+  .search-item .s-city { color: #888; font-size: 12px; margin-left: 6px; }
+  .search-item .s-score { float: right; font-size: 11px; padding: 1px 5px; border-radius: 3px; color: white; }
 </style>
 </head>
 <body>
@@ -86,6 +127,11 @@
 </div>
 
 <div id="map"></div>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search schools..." autocomplete="off">
+  <div class="search-dropdown" id="searchDropdown"></div>
+</div>
 
 <div class="controls" id="controls">
   <h3>Filter by Person</h3>
@@ -224,6 +270,91 @@ function initMap(prospects) {
   document.querySelectorAll('.filter-whom, .filter-score, #filter-active').forEach(el => {
     el.addEventListener('change', applyFilters);
   });
+
+  // Search functionality
+  const searchInput = document.getElementById('searchInput');
+  const searchDropdown = document.getElementById('searchDropdown');
+  const scoreColors = { 5: '#e74c3c', 4: '#e67e22', 3: '#3498db', 2: '#95a5a6', 1: '#bdc3c7', 0: '#555' };
+  let selectedIdx = -1;
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    selectedIdx = -1;
+    if (q.length < 1) {
+      searchDropdown.classList.remove('active');
+      return;
+    }
+
+    const matches = markers
+      .filter(m => {
+        const p = m._prospectData;
+        return p.name.toLowerCase().includes(q) || p.city.toLowerCase().includes(q) || (p.type && p.type.toLowerCase().includes(q));
+      })
+      .slice(0, 6);
+
+    if (matches.length === 0) {
+      searchDropdown.innerHTML = '<div class="search-item" style="color:#999;cursor:default">No results</div>';
+      searchDropdown.classList.add('active');
+      return;
+    }
+
+    searchDropdown.innerHTML = matches.map((m, i) => {
+      const p = m._prospectData;
+      const bg = scoreColors[p.fitScore] || '#999';
+      return `<div class="search-item" data-idx="${i}">
+        <span class="s-name">${p.name}</span><span class="s-city">${p.city}</span>
+        <span class="s-score" style="background:${bg}">${p.fitScore}</span>
+      </div>`;
+    }).join('');
+
+    searchDropdown.classList.add('active');
+
+    searchDropdown.querySelectorAll('.search-item[data-idx]').forEach((el, i) => {
+      el.addEventListener('click', () => selectResult(matches[i]));
+    });
+  });
+
+  searchInput.addEventListener('keydown', (e) => {
+    const items = searchDropdown.querySelectorAll('.search-item[data-idx]');
+    if (!items.length) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIdx = Math.min(selectedIdx + 1, items.length - 1);
+      items.forEach((el, i) => el.classList.toggle('selected', i === selectedIdx));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIdx = Math.max(selectedIdx - 1, 0);
+      items.forEach((el, i) => el.classList.toggle('selected', i === selectedIdx));
+    } else if (e.key === 'Enter' && selectedIdx >= 0) {
+      e.preventDefault();
+      const matchedMarkers = markers
+        .filter(m => {
+          const q = searchInput.value.trim().toLowerCase();
+          const p = m._prospectData;
+          return p.name.toLowerCase().includes(q) || p.city.toLowerCase().includes(q) || (p.type && p.type.toLowerCase().includes(q));
+        })
+        .slice(0, 6);
+      if (matchedMarkers[selectedIdx]) selectResult(matchedMarkers[selectedIdx]);
+    } else if (e.key === 'Escape') {
+      searchDropdown.classList.remove('active');
+      searchInput.blur();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-box')) {
+      searchDropdown.classList.remove('active');
+    }
+  });
+
+  function selectResult(marker) {
+    const p = marker._prospectData;
+    searchInput.value = p.name;
+    searchDropdown.classList.remove('active');
+    map.setView([p.lat, p.lng], 14);
+    marker.openPopup();
+  }
 }
 </script>
 

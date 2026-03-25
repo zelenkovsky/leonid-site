@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bay Area Music Prospects Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; }
+  #map { height: calc(100vh - 50px); width: 100%; }
+  .header {
+    height: 50px;
+    background: #1a1a2e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .header h1 { font-size: 16px; font-weight: 500; }
+  .header .stats { font-size: 13px; color: #aaa; }
+  .controls {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-size: 13px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    min-width: 200px;
+  }
+  .controls h3 {
+    font-size: 13px;
+    margin: 8px 0 4px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2px;
+  }
+  .controls h3:first-child { margin-top: 0; }
+  .controls label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+    cursor: pointer;
+  }
+  .controls label:hover { background: #f5f5f5; }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .popup-content { font-size: 13px; line-height: 1.5; max-width: 300px; }
+  .popup-content h3 { font-size: 14px; margin-bottom: 4px; color: #1a1a2e; }
+  .popup-content .type { color: #666; font-size: 12px; margin-bottom: 6px; }
+  .popup-content .score { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; color: white; }
+  .popup-content .score-5 { background: #e74c3c; }
+  .popup-content .score-4 { background: #e67e22; }
+  .popup-content .score-3 { background: #3498db; }
+  .popup-content .score-2 { background: #95a5a6; }
+  .popup-content .score-1 { background: #bdc3c7; }
+  .popup-content .score-0 { background: #555; }
+  .popup-content .for-whom { font-size: 11px; padding: 1px 6px; border-radius: 3px; font-weight: 500; }
+  .popup-content .for-leonid { background: #e8f4f8; color: #2980b9; }
+  .popup-content .for-margarita { background: #fde8ef; color: #c0392b; }
+  .popup-content .for-both { background: #e8f8e8; color: #27ae60; }
+  .popup-content .opening { color: #27ae60; font-weight: 600; font-size: 12px; margin-top: 4px; }
+  .popup-content .contact { font-size: 12px; color: #555; margin-top: 4px; }
+  .popup-content .website { font-size: 12px; margin-top: 4px; }
+  .popup-content a { color: #2980b9; }
+  .legend-item { display: flex; align-items: center; gap: 6px; padding: 1px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Bay Area Music Prospects — Leonid & Margarita Zelenkovsky</h1>
+  <div class="stats" id="stats">Loading...</div>
+</div>
+
+<div id="map"></div>
+
+<div class="controls" id="controls">
+  <h3>Filter by Person</h3>
+  <label><input type="checkbox" class="filter-whom" value="Leonid" checked> <span class="dot" style="background:#2980b9"></span> Leonid</label>
+  <label><input type="checkbox" class="filter-whom" value="Margarita" checked> <span class="dot" style="background:#c0392b"></span> Margarita</label>
+  <label><input type="checkbox" class="filter-whom" value="Both" checked> <span class="dot" style="background:#27ae60"></span> Both</label>
+
+  <h3>Filter by Fit Score</h3>
+  <label><input type="checkbox" class="filter-score" value="5" checked> <span class="dot" style="background:#e74c3c"></span> Score 5 (Top)</label>
+  <label><input type="checkbox" class="filter-score" value="4" checked> <span class="dot" style="background:#e67e22"></span> Score 4 (High)</label>
+  <label><input type="checkbox" class="filter-score" value="3" checked> <span class="dot" style="background:#3498db"></span> Score 3 (Moderate)</label>
+  <label><input type="checkbox" class="filter-score" value="2" checked> <span class="dot" style="background:#95a5a6"></span> Score 2 (Low)</label>
+  <label><input type="checkbox" class="filter-score" value="1" checked> <span class="dot" style="background:#bdc3c7"></span> Score 1 (Minimal)</label>
+
+  <h3>Active Openings Only</h3>
+  <label><input type="checkbox" id="filter-active"> Show only with active job postings</label>
+
+  <h3>Legend</h3>
+  <div class="legend-item"><span style="font-size:16px">&#9679;</span> Large = Score 5</div>
+  <div class="legend-item"><span style="font-size:14px">&#9679;</span> Medium = Score 4</div>
+  <div class="legend-item"><span style="font-size:12px">&#9679;</span> Small = Score 3-</div>
+  <div class="legend-item"><span style="color:#f1c40f;font-size:14px">&#9711;</span> Gold border = Active opening</div>
+</div>
+
+<script>
+fetch('prospects.json')
+  .then(r => r.json())
+  .then(data => initMap(data))
+  .catch(e => {
+    document.getElementById('stats').textContent = 'Error loading data: ' + e.message;
+  });
+
+function initMap(prospects) {
+  const map = L.map('map').setView([37.55, -122.15], 10);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 19,
+    subdomains: 'abcd'
+  }).addTo(map);
+
+  const colorMap = {
+    'Leonid': '#2980b9',
+    'Margarita': '#c0392b',
+    'Both': '#27ae60'
+  };
+
+  const scoreRadius = { 5: 12, 4: 10, 3: 7, 2: 5, 1: 4, 0: 3 };
+
+  let markers = [];
+
+  prospects.forEach(p => {
+    if (!p.lat || !p.lng) return;
+
+    const color = colorMap[p.forWhom] || '#888';
+    const radius = scoreRadius[p.fitScore] || 6;
+
+    const marker = L.circleMarker([p.lat, p.lng], {
+      radius: radius,
+      fillColor: color,
+      color: p.activeOpening ? '#f1c40f' : '#fff',
+      weight: p.activeOpening ? 3 : 1.5,
+      fillOpacity: 0.8
+    });
+
+    const scoreClass = 'score-' + p.fitScore;
+    const whomClass = 'for-' + p.forWhom.toLowerCase();
+
+    let popupHtml = `<div class="popup-content">
+      <h3>${p.name}</h3>
+      <div class="type">${p.type} — ${p.city}</div>
+      <span class="score ${scoreClass}">Fit: ${p.fitScore}/5</span>
+      <span class="for-whom ${whomClass}">${p.forWhom}</span>`;
+
+    if (p.website) {
+      popupHtml += `<div class="website"><a href="${p.website}" target="_blank">${p.website}</a></div>`;
+    }
+
+    if (p.activeOpening && p.openingDetails) {
+      popupHtml += `<div class="opening">&#11089; ${p.openingDetails}</div>`;
+    }
+
+    if (p.address) {
+      popupHtml += `<div class="contact">${p.address}</div>`;
+    }
+
+    if (p.email) {
+      popupHtml += `<div class="contact"><a href="mailto:${p.email}">${p.email}</a></div>`;
+    }
+
+    if (p.phone) {
+      popupHtml += `<div class="contact">${p.phone}</div>`;
+    }
+
+    if (p.notes) {
+      popupHtml += `<div style="margin-top:4px;font-size:12px;color:#444;">${p.notes}</div>`;
+    }
+
+    popupHtml += `</div>`;
+
+    marker.bindPopup(popupHtml, { maxWidth: 320 });
+
+    marker._prospectData = p;
+    markers.push(marker);
+    marker.addTo(map);
+  });
+
+  const activeCount = prospects.filter(p => p.activeOpening).length;
+  document.getElementById('stats').textContent =
+    `${prospects.length} prospects | ${activeCount} with active openings`;
+
+  function applyFilters() {
+    const checkedWhom = [...document.querySelectorAll('.filter-whom:checked')].map(c => c.value);
+    const checkedScores = [...document.querySelectorAll('.filter-score:checked')].map(c => parseInt(c.value));
+    const activeOnly = document.getElementById('filter-active').checked;
+
+    let visible = 0;
+    markers.forEach(m => {
+      const p = m._prospectData;
+      const show = checkedWhom.includes(p.forWhom)
+        && checkedScores.includes(p.fitScore)
+        && (!activeOnly || p.activeOpening);
+
+      if (show) {
+        m.addTo(map);
+        visible++;
+      } else {
+        map.removeLayer(m);
+      }
+    });
+
+    document.getElementById('stats').textContent =
+      `Showing ${visible} of ${prospects.length} prospects | ${activeCount} with active openings`;
+  }
+
+  document.querySelectorAll('.filter-whom, .filter-score, #filter-active').forEach(el => {
+    el.addEventListener('change', applyFilters);
+  });
+}
+</script>
+
+</body>
+</html>

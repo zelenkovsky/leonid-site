@@ -117,6 +117,63 @@
   .search-item .s-name { font-weight: 500; color: #1a1a2e; }
   .search-item .s-city { color: #888; font-size: 12px; margin-left: 6px; }
   .search-item .s-score { float: right; font-size: 11px; padding: 1px 5px; border-radius: 3px; color: white; }
+
+  /* Controls toggle button */
+  .controls-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 6px;
+    user-select: none;
+  }
+  .controls-toggle span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+  }
+  .controls-toggle .toggle-arrow {
+    font-size: 12px;
+    color: #999;
+    transition: transform 0.2s;
+  }
+  .controls.collapsed .controls-toggle .toggle-arrow {
+    transform: rotate(-90deg);
+  }
+  .controls-body {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+  .controls.collapsed .controls-body {
+    max-height: 0 !important;
+  }
+  .controls.collapsed {
+    min-width: auto;
+    padding: 10px 12px;
+  }
+
+  /* Mobile: collapse by default, fix zoom buttons */
+  @media (max-width: 768px) {
+    .controls {
+      max-width: 220px;
+      font-size: 12px;
+    }
+    .search-box {
+      width: calc(100% - 80px);
+      left: 10px;
+    }
+    .leaflet-control-zoom {
+      margin-bottom: 20px !important;
+    }
+    .leaflet-control-zoom a {
+      width: 36px !important;
+      height: 36px !important;
+      line-height: 36px !important;
+      font-size: 20px !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -134,29 +191,40 @@
 </div>
 
 <div class="controls" id="controls">
-  <h3>Filter by Person</h3>
-  <label><input type="checkbox" class="filter-whom" value="Leonid" checked> <span class="dot" style="background:#2980b9"></span> Leonid</label>
-  <label><input type="checkbox" class="filter-whom" value="Margarita" checked> <span class="dot" style="background:#c0392b"></span> Margarita</label>
-  <label><input type="checkbox" class="filter-whom" value="Both" checked> <span class="dot" style="background:#27ae60"></span> Both</label>
+  <div class="controls-toggle" onclick="document.getElementById('controls').classList.toggle('collapsed')">
+    <span>Filters & Legend</span>
+    <span class="toggle-arrow">&#9660;</span>
+  </div>
+  <div class="controls-body" id="controlsBody">
+    <h3>Filter by Person</h3>
+    <label><input type="checkbox" class="filter-whom" value="Leonid" checked> <span class="dot" style="background:#2980b9"></span> Leonid</label>
+    <label><input type="checkbox" class="filter-whom" value="Margarita" checked> <span class="dot" style="background:#c0392b"></span> Margarita</label>
+    <label><input type="checkbox" class="filter-whom" value="Both" checked> <span class="dot" style="background:#27ae60"></span> Both</label>
 
-  <h3>Filter by Fit Score</h3>
-  <label><input type="checkbox" class="filter-score" value="5" checked> <span class="dot" style="background:#e74c3c"></span> Score 5 (Top)</label>
-  <label><input type="checkbox" class="filter-score" value="4" checked> <span class="dot" style="background:#e67e22"></span> Score 4 (High)</label>
-  <label><input type="checkbox" class="filter-score" value="3" checked> <span class="dot" style="background:#3498db"></span> Score 3 (Moderate)</label>
-  <label><input type="checkbox" class="filter-score" value="2" checked> <span class="dot" style="background:#95a5a6"></span> Score 2 (Low)</label>
-  <label><input type="checkbox" class="filter-score" value="1" checked> <span class="dot" style="background:#bdc3c7"></span> Score 1 (Minimal)</label>
+    <h3>Filter by Fit Score</h3>
+    <label><input type="checkbox" class="filter-score" value="5" checked> <span class="dot" style="background:#e74c3c"></span> Score 5 (Top)</label>
+    <label><input type="checkbox" class="filter-score" value="4" checked> <span class="dot" style="background:#e67e22"></span> Score 4 (High)</label>
+    <label><input type="checkbox" class="filter-score" value="3" checked> <span class="dot" style="background:#3498db"></span> Score 3 (Moderate)</label>
+    <label><input type="checkbox" class="filter-score" value="2" checked> <span class="dot" style="background:#95a5a6"></span> Score 2 (Low)</label>
+    <label><input type="checkbox" class="filter-score" value="1" checked> <span class="dot" style="background:#bdc3c7"></span> Score 1 (Minimal)</label>
 
-  <h3>Active Openings Only</h3>
-  <label><input type="checkbox" id="filter-active"> Show only with active job postings</label>
+    <h3>Active Openings Only</h3>
+    <label><input type="checkbox" id="filter-active"> Show only with active job postings</label>
 
-  <h3>Legend</h3>
-  <div class="legend-item"><span style="font-size:16px">&#9679;</span> Large = Score 5</div>
-  <div class="legend-item"><span style="font-size:14px">&#9679;</span> Medium = Score 4</div>
-  <div class="legend-item"><span style="font-size:12px">&#9679;</span> Small = Score 3-</div>
-  <div class="legend-item"><span style="color:#f1c40f;font-size:14px">&#9711;</span> Gold border = Active opening</div>
+    <h3>Legend</h3>
+    <div class="legend-item"><span style="font-size:16px">&#9679;</span> Large = Score 5</div>
+    <div class="legend-item"><span style="font-size:14px">&#9679;</span> Medium = Score 4</div>
+    <div class="legend-item"><span style="font-size:12px">&#9679;</span> Small = Score 3-</div>
+    <div class="legend-item"><span style="color:#f1c40f;font-size:14px">&#9711;</span> Gold border = Active opening</div>
+  </div>
 </div>
 
 <script>
+// Auto-collapse filters on mobile
+if (window.innerWidth <= 768) {
+  document.getElementById('controls').classList.add('collapsed');
+}
+
 fetch('prospects.json')
   .then(r => r.json())
   .then(data => initMap(data))

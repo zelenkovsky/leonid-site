@@ -15,7 +15,9 @@
     "notes": "Major conservatory prep program; teaches all orchestral instruments; uses piano accompanists; regularly hires adjunct faculty",
     "activeOpening": true,
     "openingDetails": "Early Childhood Music Instructor - $90/hr; faculty positions regularly available",
-    "website": "https://sfcm.edu/study/pre-college"
+    "website": "https://sfcm.edu/study/pre-college",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 2,
@@ -33,7 +35,9 @@
     "notes": "Oldest community music school in SF; sliding-scale tuition; teaches winds/brass and piano; $47/hr for lessons",
     "activeOpening": true,
     "openingDetails": "Cello Instructor - $47/hr (Feb 2026); other faculty positions likely",
-    "website": "https://www.sfcmc.org"
+    "website": "https://www.sfcmc.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 3,
@@ -51,7 +55,9 @@
     "notes": "Chamber music focus; full day school + after-school program; Head of Music position open $110-130k",
     "activeOpening": true,
     "openingDetails": "Head of Music - Full-time, $110,000-$130,000/year, start May/June 2026",
-    "website": "https://www.crowden.org"
+    "website": "https://www.crowden.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 4,
@@ -69,7 +75,9 @@
     "notes": "Youth orchestra; needs wind/brass sectional coaches; historical Asst Conductor at $10k/yr for ~40 services",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.peninsulayouthorchestra.org"
+    "website": "https://www.peninsulayouthorchestra.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 5,
@@ -87,7 +95,9 @@
     "notes": "Major youth orchestra program; multiple ensembles; needs wind/brass coaches and possibly accompanists",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.gsyomusic.org"
+    "website": "https://www.gsyomusic.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 6,
@@ -105,7 +115,9 @@
     "notes": "Prestigious youth orchestra est. 1952; has Wind Symphony Director and Brass Coach; needs sectional coaches",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.cys.org"
+    "website": "https://www.cys.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 7,
@@ -123,7 +135,9 @@
     "notes": "Large private K-12; Conservatory of the Arts; 2,750 students; 300+ employees; employs full-time music teachers",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.vcs.net"
+    "website": "https://www.vcs.net",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 8,
@@ -141,7 +155,9 @@
     "notes": "Elite private K-12; strong performing arts; ~52 open positions; band and orchestra program",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.harker.org"
+    "website": "https://www.harker.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 9,
@@ -159,7 +175,9 @@
     "notes": "K-12 private Catholic school on 63-acre campus; performing arts program; potential for both wind teacher and accompanist",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.shschools.org"
+    "website": "https://www.shschools.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 10,
@@ -177,7 +195,9 @@
     "notes": "Program of SF Symphony; section coaches are SFS musicians; no current openings; prestigious",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.sfsymphony.org/Education/SFS-Youth-Orchestra"
+    "website": "https://www.sfsymphony.org/Education/SFS-Youth-Orchestra",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 11,
@@ -195,7 +215,9 @@
     "notes": "Premier youth chorus; employs 10+ pianists; HIGH PRIORITY for Margarita; hiring Exec Dir and Dir of Finance",
     "activeOpening": true,
     "openingDetails": "Executive Director; Director of Finance; Premier Ensemble Assistant (PT up to 20 hrs/wk)",
-    "website": "https://www.sfgirlschorus.org"
+    "website": "https://www.sfgirlschorus.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 12,
@@ -213,7 +235,9 @@
     "notes": "Boys chorus; 6-7 collaborative pianists on staff; major employer of accompanists; satellite locations in PA and Burlingame",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://ragazzi.org"
+    "website": "https://ragazzi.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 13,
@@ -231,7 +255,9 @@
     "notes": "Youth chorus; 4 accompanists; Dmitriy Cogan (Russian-born pianist) is accompanist - networking contact",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.peninsulagirlschorus.org"
+    "website": "https://www.peninsulagirlschorus.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 14,
@@ -249,7 +275,9 @@
     "notes": "Orthodox church - strictly a cappella (no instruments); Russian community networking only",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.holy-trinity.org"
+    "website": "https://www.holy-trinity.org",
+    "insuranceGroup": "H",
+    "insuranceLabel": "Religious / Community Organization (Stipend — Benefits Unlikely)"
   },
   {
     "id": 15,
@@ -267,7 +295,9 @@
     "notes": "ACTIVE: Middle School Orchestra Teacher posting (1.0 FTE); posted 3/13/2026; requires Music credential",
     "activeOpening": true,
     "openingDetails": "Middle School Orchestra Teacher - 0.6 FTE Fletcher + 0.4 FTE JLS (1.0 FTE total); Long-Term Sub Music Teacher",
-    "website": "https://www.pausd.org"
+    "website": "https://www.pausd.org",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 16,
@@ -285,7 +315,9 @@
     "notes": "7th largest district in CA; many schools need music teachers; check EdJoin spring/summer for openings",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.sfusd.edu"
+    "website": "https://www.sfusd.edu",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 17,
@@ -303,7 +335,9 @@
     "notes": "Strong band programs at MVHS and LAHS; small district; one of highest-paying districts in CA for teachers",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.mvla.net"
+    "website": "https://www.mvla.net",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 18,
@@ -321,7 +355,9 @@
     "notes": "Part-Time Music Instructor Pool for De Anza and Foothill; apply via Foothill-De Anza district portal",
     "activeOpening": true,
     "openingDetails": "Part-Time Music Instructor Pool (ongoing recruitment)",
-    "website": "https://www.deanza.edu"
+    "website": "https://www.deanza.edu",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 19,
@@ -339,7 +375,9 @@
     "notes": "Same district as De Anza; shared Part-Time Music Instructor Pool and Commercial Music Pool",
     "activeOpening": true,
     "openingDetails": "Part-Time Music Instructor Pool; Part-Time Commercial Music Instructor Pool",
-    "website": "https://www.foothill.edu"
+    "website": "https://www.foothill.edu",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 20,
@@ -357,7 +395,9 @@
     "notes": "Contra Costa CCD; no active music adjunct postings March 2026; check 4cdcareers.net periodically",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.dvc.edu"
+    "website": "https://www.dvc.edu",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 21,
@@ -375,7 +415,9 @@
     "notes": "SMCCD Part-Time Music Instructor Pool open; Part-Time Guitar Instructor Pool; across 3 colleges",
     "activeOpening": true,
     "openingDetails": "Part-Time Music Instructor Pool; Part-Time Guitar Instructor Pool (SMCCD)",
-    "website": "https://www.collegeofsanmateo.edu"
+    "website": "https://www.collegeofsanmateo.edu",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 22,
@@ -393,7 +435,9 @@
     "notes": "Degree programs ended Fall 2024; community programs continue; jazz focus; sax and brass core instruments",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://jazzschool.org"
+    "website": "https://jazzschool.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 23,
@@ -411,7 +455,9 @@
     "notes": "Jesuit boys' school; has band/orchestra program; may hire wind/brass instructor",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.bcp.org"
+    "website": "https://www.bcp.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 24,
@@ -429,7 +475,9 @@
     "notes": "Private school Grades 6-12; one instrumental music teacher; ~19 open jobs; no dedicated music posting",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.menloschool.org"
+    "website": "https://www.menloschool.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 25,
@@ -447,7 +495,9 @@
     "notes": "CSU school of music; Part-Time Lecturer Pool (rolling); tenure-track positions in musicology and music education",
     "activeOpening": true,
     "openingDetails": "Part-Time Lecturer Pool (ongoing); Asst Prof Musicology; Asst Prof Music Education (Aug 2026)",
-    "website": "https://www.sjsu.edu/music"
+    "website": "https://www.sjsu.edu/music",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 26,
@@ -465,7 +515,9 @@
     "notes": "Oldest independent youth orchestra in US (est. 1936); 90th anniversary 2026-27; 85+ student musicians",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.ypsomusic.org"
+    "website": "https://www.ypsomusic.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 27,
@@ -483,7 +535,9 @@
     "notes": "City-operated arts center; 900+ productions/year; 350k+ patrons; three performance venues",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.lesherartscenter.org"
+    "website": "https://www.lesherartscenter.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 28,
@@ -501,7 +555,9 @@
     "notes": "Russian cultural center est. 1939; 550-seat ballroom/theater; Russian community networking",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.russiancentersf.org"
+    "website": "https://www.russiancentersf.org",
+    "insuranceGroup": "H",
+    "insuranceLabel": "Religious / Community Organization (Stipend — Benefits Unlikely)"
   },
   {
     "id": 29,
@@ -519,7 +575,9 @@
     "notes": "Major Episcopal cathedral; strong choral tradition; accompanist role currently filled; 80-105 employees",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.gracecathedral.org"
+    "website": "https://www.gracecathedral.org",
+    "insuranceGroup": "H",
+    "insuranceLabel": "Religious / Community Organization (Stipend — Benefits Unlikely)"
   },
   {
     "id": 30,
@@ -537,7 +595,9 @@
     "notes": "Large East Bay district; 44 schools; ~33k students; Prop 28 funding for arts; $6.7M staffing increase",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://fremontunified.org"
+    "website": "https://fremontunified.org",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 31,
@@ -555,7 +615,9 @@
     "notes": "6 comprehensive high schools; strong VAPA curriculum; 275+ students in advanced music ensembles",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.smuhsd.org"
+    "website": "https://www.smuhsd.org",
+    "insuranceGroup": "A",
+    "insuranceLabel": "Public Sector (CalPERS/CalSTRS)"
   },
   {
     "id": 32,
@@ -573,7 +635,9 @@
     "notes": "3 locations (Mountain View x2 + Palo Alto); 40+ faculty; 1,000+ students; benefits for FT employees",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://musicopus1.com"
+    "website": "https://musicopus1.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 33,
@@ -591,7 +655,9 @@
     "notes": "Russian-owned; 3 locations (Sunnyvale/MV/Milpitas); 11k+ sq ft; teaches piano, guitar, violin, flute, cello, voice",
     "activeOpening": true,
     "openingDetails": "Music teaching positions (PT) - Piano, Guitar, Violin, Flute, Cello, Voice; substitute teachers wanted",
-    "website": "https://www.veksleracademy.com"
+    "website": "https://www.veksleracademy.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 34,
@@ -609,7 +675,9 @@
     "notes": "ACTIVELY HIRING: Piano PT, Voice PT, Violin PT, Guitar PT, Cello PT; FT = 30 hrs/wk across 5 days",
     "activeOpening": true,
     "openingDetails": "Piano Teacher (PT); Voice Teacher (PT); Violin (PT); Guitar (PT); Cello (PT); Harmony Road Instructor (PT)",
-    "website": "https://www.newmozartschool.com"
+    "website": "https://www.newmozartschool.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 35,
@@ -627,7 +695,9 @@
     "notes": "Teaches brass and woodwinds plus piano; $69-$125/lesson student rates; inquire directly for openings",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://ncmac.net"
+    "website": "https://ncmac.net",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 36,
@@ -645,7 +715,9 @@
     "notes": "Tony Award-winning theater; musicals need rehearsal pianists; Patron Services Manager position open",
     "activeOpening": true,
     "openingDetails": "Patron Services Manager - $25/hr FT (not music); rehearsal pianists hired per production",
-    "website": "https://theatreworks.org"
+    "website": "https://theatreworks.org",
+    "insuranceGroup": "D",
+    "insuranceLabel": "Professional Performing Arts (Benefits for Full-Time Company Staff)"
   },
   {
     "id": 37,
@@ -663,7 +735,9 @@
     "notes": "El Sistema program; serves 250+ underserved K-12 students; band/choir/orchestra; teaching artist pay ~$30-60/hr",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.bayareamusicproject.org"
+    "website": "https://www.bayareamusicproject.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 38,
@@ -681,7 +755,9 @@
     "notes": "Professional ballet company; daily Advanced/Professional classes use live piano accompanists; strong fit for Margarita",
     "activeOpening": true,
     "openingDetails": "Summer Program Coordinator - $26/hr (seasonal); ballet accompanist positions likely via word-of-mouth",
-    "website": "https://linesballet.org"
+    "website": "https://linesballet.org",
+    "insuranceGroup": "D",
+    "insuranceLabel": "Professional Performing Arts (Benefits for Full-Time Company Staff)"
   },
   {
     "id": 39,
@@ -699,7 +775,9 @@
     "notes": "TOP PRIORITY for Leonid; Concert Wind Ensemble and Brass Ensemble; uses professional coaches; Charles Ancheta conducts winds/brass",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://sjys.org"
+    "website": "https://sjys.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 40,
@@ -717,7 +795,9 @@
     "notes": "Full symphonic youth ensemble; uses sectional coaches; Omid Zoufonoun directs; part of Oakland Symphony",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.oaklandsymphony.org"
+    "website": "https://www.oaklandsymphony.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 41,
@@ -735,7 +815,9 @@
     "notes": "Community musical theater; 6 musicals/season; uses rehearsal pianists for auditions and rehearsals",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://southbaymt.com"
+    "website": "https://southbaymt.com",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 42,
@@ -753,7 +835,9 @@
     "notes": "96th season; community theatre producing musicals (Frozen Apr-May 2026); requires rehearsal pianists",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://paplayers.org"
+    "website": "https://paplayers.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 43,
@@ -771,7 +855,9 @@
     "notes": "Active wind/brass faculty (trombone, trumpet, woodwinds, sax); 60+ faculty; serves underserved youth since 1968",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://eastbaycenter.org"
+    "website": "https://eastbaycenter.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 44,
@@ -789,7 +875,9 @@
     "notes": "HIGH PRIORITY for Margarita; ballet school using live pianists for classes; contact Zory Karah directly",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.sfacademyofballet.com"
+    "website": "https://www.sfacademyofballet.com",
+    "insuranceGroup": "D",
+    "insuranceLabel": "Professional Performing Arts (Benefits for Full-Time Company Staff)"
   },
   {
     "id": 45,
@@ -807,7 +895,9 @@
     "notes": "ACTIVELY HIRING: Piano, Violin, Cello, Voice instructors; 2 campuses (SF + Moraga); US work auth required",
     "activeOpening": true,
     "openingDetails": "Music Instructors (Piano, Violin, Cello, Voice, Group Classes); Office Administrators",
-    "website": "https://www.amabilemusic.org"
+    "website": "https://www.amabilemusic.org",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 46,
@@ -825,7 +915,9 @@
     "notes": "21 open positions on Paycom portal; no music-specific posting; accepts unsolicited applications",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.crystal.org"
+    "website": "https://www.crystal.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 47,
@@ -843,7 +935,9 @@
     "notes": "Top SF private school; award-winning Big Band; Marty Stoddard (22+ yrs, flutist/conductor) leads instrumental music",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.lwhs.org"
+    "website": "https://www.lwhs.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 48,
@@ -861,7 +955,9 @@
     "notes": "PERMANENTLY CLOSED after final production Nov 2025; ceased operations Feb 2026",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://wvlo.org"
+    "website": "https://wvlo.org",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 49,
@@ -879,7 +975,9 @@
     "notes": "100% volunteer-driven; no paid positions; networking opportunity for orchestra musicians and rehearsal pianists",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.lyrictheatre.org"
+    "website": "https://www.lyrictheatre.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 50,
@@ -897,7 +995,9 @@
     "notes": "HIGH PRIORITY for Leonid; has Brass Academy; uses professional sectional coaches; affiliated with SV Philharmonic",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.svyouthsymphony.org"
+    "website": "https://www.svyouthsymphony.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 51,
@@ -915,7 +1015,9 @@
     "notes": "3 locations (Sunnyvale/Redwood City/Fremont) + virtual; hiring Piano, Violin, Voice, Guitar teachers",
     "activeOpening": true,
     "openingDetails": "Violin Teacher; Piano Teacher; Voice Teacher; Guitar Teacher",
-    "website": "https://thecaliforniaconservatory.com"
+    "website": "https://thecaliforniaconservatory.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 52,
@@ -933,7 +1035,9 @@
     "notes": "Community theater; volunteer-heavy; per-show music director and rehearsal pianist; stipends $500-$2,000/production",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.sunnyvaleplayers.org"
+    "website": "https://www.sunnyvaleplayers.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 53,
@@ -951,7 +1055,9 @@
     "notes": "179-seat intimate theater; music directors and rehearsal pianists hired per production",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.hillbarntheatre.org"
+    "website": "https://www.hillbarntheatre.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 54,
@@ -969,7 +1075,9 @@
     "notes": "TOP PRIORITY for Margarita; oldest US ballet school; multiple pianists employed; Accompanist Seminar June 2026; 2nd Bassoon opening for Leonid ($88k+)",
     "activeOpening": true,
     "openingDetails": "Second Bassoon (tenure track, $88,249 min, Dec 2026 start); Ballet pianist positions via Pianist Supervisor Jamie Narushchen",
-    "website": "https://www.sfballet.org/school"
+    "website": "https://www.sfballet.org/school",
+    "insuranceGroup": "D",
+    "insuranceLabel": "Professional Performing Arts (Benefits for Full-Time Company Staff)"
   },
   {
     "id": 55,
@@ -987,7 +1095,9 @@
     "notes": "Professional ballet company with dance school; may use live accompanists for company class; dancers start $1,200/wk",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.smuinballet.org"
+    "website": "https://www.smuinballet.org",
+    "insuranceGroup": "D",
+    "insuranceLabel": "Professional Performing Arts (Benefits for Full-Time Company Staff)"
   },
   {
     "id": 56,
@@ -1005,7 +1115,9 @@
     "notes": "4 SF locations; popular/rock/jazz focus; 60+ teaching musicians; Apply to Teach via website",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://bluebearmusic.org"
+    "website": "https://bluebearmusic.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 57,
@@ -1023,7 +1135,9 @@
     "notes": "Elite all-girls school; tuition $65,300; no music positions posted March 2026",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.castilleja.org"
+    "website": "https://www.castilleja.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 58,
@@ -1041,7 +1155,9 @@
     "notes": "ACTIVELY HIRING music instructors; requires BA in music; competitive pay; growing student base",
     "activeOpening": true,
     "openingDetails": "Music instructors across all instruments",
-    "website": "https://kwanmusic.com"
+    "website": "https://kwanmusic.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 59,
@@ -1059,7 +1175,9 @@
     "notes": "ACTIVELY HIRING: Piano, Violin/Viola, Guitar, Music Theory, Voice; HIGH PRIORITY for Margarita (piano + Children's Chorus)",
     "activeOpening": true,
     "openingDetails": "Music Teachers (Violin, Viola, Piano, Guitar, Theory, Voice); Teaching Assistants",
-    "website": "https://sanjoseacademyofmusic.com"
+    "website": "https://sanjoseacademyofmusic.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 60,
@@ -1077,7 +1195,9 @@
     "notes": "Top East Bay K-12 private school; performing arts program; no music positions March 2026; uses Lever for hiring",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://headroyce.org"
+    "website": "https://headroyce.org",
+    "insuranceGroup": "B",
+    "insuranceLabel": "Private K-12 School (Competitive Benefits)"
   },
   {
     "id": 61,
@@ -1095,7 +1215,9 @@
     "notes": "HIGH PRIORITY for Margarita; Gilbert & Sullivan/operetta; employs rehearsal pianists; year-round productions; est. 1952",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://lamplighters.org"
+    "website": "https://lamplighters.org",
+    "insuranceGroup": "G",
+    "insuranceLabel": "Community Theater (Per-Production — No Benefits)"
   },
   {
     "id": 62,
@@ -1113,7 +1235,9 @@
     "notes": "HIGHEST PRIORITY; GRAMMY-winning; 1,400+ students; ACTIVELY HIRING collaborative pianist ($50-100/hr) and Associate Conductor in SF",
     "activeOpening": true,
     "openingDetails": "Associate Pianist ($50-100/hr, SF chapter inquiry needed); Associate Conductor (SF listed)",
-    "website": "https://nationalchildrenschorus.com"
+    "website": "https://nationalchildrenschorus.com",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 63,
@@ -1131,7 +1255,9 @@
     "notes": "HIGH PRIORITY for Leonid; actively recruiting wind/brass/percussion; 35-50 young musicians; uses Bay Phil professionals as coaches",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://bayphil.org/youth"
+    "website": "https://bayphil.org/youth",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 64,
@@ -1149,7 +1275,9 @@
     "notes": "HIGH PRIORITY for Margarita; Music Dir filled Jan 2025 but church willing to split director/pianist roles; $43k/yr half-time",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.asaints.org"
+    "website": "https://www.asaints.org",
+    "insuranceGroup": "H",
+    "insuranceLabel": "Religious / Community Organization (Stipend — Benefits Unlikely)"
   },
   {
     "id": 65,
@@ -1167,7 +1295,9 @@
     "notes": "Major community music school; 2 campuses (Mountain View + Belmont); no current teaching openings March 2026",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://arts4all.org"
+    "website": "https://arts4all.org",
+    "insuranceGroup": "C",
+    "insuranceLabel": "Conservatory / Large Nonprofit (Benefits for Full-Time Staff)"
   },
   {
     "id": 66,
@@ -1185,7 +1315,9 @@
     "notes": "Sunnyvale conservatory; faculty are concert artists and chamber musicians; no postings March 2026",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.svcm.us.com"
+    "website": "https://www.svcm.us.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 67,
@@ -1203,7 +1335,9 @@
     "notes": "Milpitas music school; operating since 1984; experienced faculty; no postings March 2026",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.sbsma.com"
+    "website": "https://www.sbsma.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 68,
@@ -1221,7 +1355,9 @@
     "notes": "WARNING: Website domain is Sarasota FL; separate Allegro School in San Mateo at (650) 593-3900; verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://allegromusicacademy.com"
+    "website": "https://allegromusicacademy.com",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 69,
@@ -1239,7 +1375,9 @@
     "notes": "Multiple Bay Area locations (Cupertino/SJ, Fremont, Palo Alto); part of Ensemble Schools network",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.ensembleschools.com/melody/"
+    "website": "https://www.ensembleschools.com/melody/",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 70,
@@ -1257,7 +1395,9 @@
     "notes": "Home/studio visit model; serves San Mateo to Fremont corridor; small select faculty",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.serinamusic.com"
+    "website": "https://www.serinamusic.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 71,
@@ -1275,7 +1415,9 @@
     "notes": "Studio space for independent teachers; join by arrangement with partners; teachers set own rates",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.hopestreetmusicstudios.com"
+    "website": "https://www.hopestreetmusicstudios.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 72,
@@ -1293,7 +1435,9 @@
     "notes": "Multiple South Bay locations (San Jose, Palo Alto, Mountain View); piano and multi-instrument instruction",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://pmacadem.com"
+    "website": "https://pmacadem.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 73,
@@ -1311,7 +1455,9 @@
     "notes": "NOTE: Primary facility in Livermore not Cupertino; 20+ instructors; serves Tri-Valley area",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://musicti.me"
+    "website": "https://musicti.me",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 74,
@@ -1329,7 +1475,9 @@
     "notes": "Volunteer community orchestra; 70+ musicians; networking opportunity; rehearses at Immanuel Lutheran Los Altos",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.novavista.org"
+    "website": "https://www.novavista.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 75,
@@ -1347,7 +1495,9 @@
     "notes": "Website not found; may be newer/smaller/home-based piano school; verify existence before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "Unknown (svpianoschool.com unresolved)"
+    "website": "Unknown (svpianoschool.com unresolved)",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 76,
@@ -1365,7 +1515,9 @@
     "notes": "NOTE: Located in Berkeley not Silicon Valley; 12+ teachers; has Work With Us page; $400-$600/mo student tuition",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://goldenkeypianoschool.com"
+    "website": "https://goldenkeypianoschool.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 77,
@@ -1383,7 +1535,9 @@
     "notes": "Website not found; related: GLORIA Russian School in Sunnyvale (gloriamusicschool.com); verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "Unknown (russianschoolofmusic.com unresolved)"
+    "website": "Unknown (russianschoolofmusic.com unresolved)",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 78,
@@ -1401,7 +1555,9 @@
     "notes": "WARNING: Actual location is North Vancouver BC Canada NOT Los Altos; verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://avamusicart.com"
+    "website": "https://avamusicart.com",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 79,
@@ -1419,7 +1575,9 @@
     "notes": "Website not found; may be newer/home-based; direct inquiry needed",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "Unknown (paloaltomusicacademy.com unresolved)"
+    "website": "Unknown (paloaltomusicacademy.com unresolved)",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 80,
@@ -1437,7 +1595,9 @@
     "notes": "May refer to Joyful Musicians at 2114 Camperdown Way SJ (Music Together classes); verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "Unknown (joyfulmusicarts.com)"
+    "website": "Unknown (joyfulmusicarts.com)",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 81,
@@ -1455,7 +1615,9 @@
     "notes": "Website has loading issues; related school at 6601 Dublin Blvd Dublin CA; verify Cupertino location",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.harmonymusicschools.com"
+    "website": "https://www.harmonymusicschools.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 82,
@@ -1473,7 +1635,9 @@
     "notes": "All-volunteer community orchestra; est. 1988; 37th season; Lara Webber conducts; networking only",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.paphil.org"
+    "website": "https://www.paphil.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 83,
@@ -1491,7 +1655,9 @@
     "notes": "2 San Jose retail locations; offers music lessons; retail + lesson studio model",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.musvil.com"
+    "website": "https://www.musvil.com",
+    "insuranceGroup": "F",
+    "insuranceLabel": "Small Private Music Studio (Independent Contractor — No Benefits)"
   },
   {
     "id": 84,
@@ -1509,7 +1675,9 @@
     "notes": "WARNING: Likely based in Frisco TX not Sunnyvale; (214) is Dallas area code; verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://youngartistmusicschool.com"
+    "website": "https://youngartistmusicschool.com",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 85,
@@ -1527,7 +1695,9 @@
     "notes": "WARNING: Website is Kalamazoo MI location NOT San Jose; email may route to MI; verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.crescendoacademy.com"
+    "website": "https://www.crescendoacademy.com",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 86,
@@ -1545,7 +1715,9 @@
     "notes": "Website offline; no directory listings found; may be home-based or no longer active; verify before outreach",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "elitemusiccenter.com (offline)"
+    "website": "elitemusiccenter.com (offline)",
+    "insuranceGroup": "X",
+    "insuranceLabel": "Non-Viable (Closed / Out-of-Area)"
   },
   {
     "id": 87,
@@ -1563,7 +1735,9 @@
     "notes": "Duplicate of #74; volunteer community orchestra est. 1966; 70+ musicians; largest in Santa Clara Valley; networking opportunity",
     "activeOpening": false,
     "openingDetails": "",
-    "website": "https://www.novavista.org"
+    "website": "https://www.novavista.org",
+    "insuranceGroup": "E",
+    "insuranceLabel": "Youth Ensemble / Community Orchestra (Contract — No Benefits)"
   },
   {
     "id": 88,
@@ -1581,6 +1755,8 @@
     "forWhom": "Both",
     "notes": "Russian-language school; music program has piano/choir but NO wind/brass; strong cultural match",
     "activeOpening": false,
-    "openingDetails": ""
+    "openingDetails": "",
+    "insuranceGroup": "H",
+    "insuranceLabel": "Religious / Community Organization (Stipend — Benefits Unlikely)"
   }
 ]

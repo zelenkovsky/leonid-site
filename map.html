@@ -75,6 +75,11 @@
   .popup-content .contact { font-size: 12px; color: #555; margin-top: 4px; }
   .popup-content .website { font-size: 12px; margin-top: 4px; }
   .popup-content a { color: #2980b9; }
+  .popup-content .insurance { font-size: 11px; margin-top: 4px; padding: 2px 6px; border-radius: 3px; display: inline-block; }
+  .popup-content .ins-benefits { background: #e8f8e8; color: #27ae60; }
+  .popup-content .ins-unlikely { background: #fef3e0; color: #e67e22; }
+  .popup-content .ins-none { background: #fde8e8; color: #c0392b; }
+  .popup-content .ins-na { background: #eee; color: #999; }
   .legend-item { display: flex; align-items: center; gap: 6px; padding: 1px 0; }
 
   /* Search box */
@@ -234,6 +239,17 @@
     <label><input type="checkbox" class="filter-score" value="2" checked> <span class="dot" style="background:#95a5a6"></span> Score 2 (Low)</label>
     <label><input type="checkbox" class="filter-score" value="1" checked> <span class="dot" style="background:#bdc3c7"></span> Score 1 (Minimal)</label>
 
+    <h3>Filter by Insurance Group</h3>
+    <label><input type="checkbox" class="filter-ins" value="A" checked> <span class="dot" style="background:#27ae60"></span> A: Public Sector</label>
+    <label><input type="checkbox" class="filter-ins" value="B" checked> <span class="dot" style="background:#27ae60"></span> B: Private K-12</label>
+    <label><input type="checkbox" class="filter-ins" value="C" checked> <span class="dot" style="background:#27ae60"></span> C: Conservatory/Nonprofit</label>
+    <label><input type="checkbox" class="filter-ins" value="D" checked> <span class="dot" style="background:#e67e22"></span> D: Performing Arts</label>
+    <label><input type="checkbox" class="filter-ins" value="E" checked> <span class="dot" style="background:#c0392b"></span> E: Youth Ensemble</label>
+    <label><input type="checkbox" class="filter-ins" value="F" checked> <span class="dot" style="background:#c0392b"></span> F: Private Studio</label>
+    <label><input type="checkbox" class="filter-ins" value="G" checked> <span class="dot" style="background:#c0392b"></span> G: Community Theater</label>
+    <label><input type="checkbox" class="filter-ins" value="H" checked> <span class="dot" style="background:#e67e22"></span> H: Religious/Community</label>
+    <label><input type="checkbox" class="filter-ins" value="X" checked> <span class="dot" style="background:#999"></span> X: Non-Viable</label>
+
     <h3>Active Openings Only</h3>
     <label><input type="checkbox" id="filter-active"> Show only with active job postings</label>
 
@@ -242,6 +258,10 @@
     <div class="legend-item"><span style="font-size:14px">&#9679;</span> Medium = Score 4</div>
     <div class="legend-item"><span style="font-size:12px">&#9679;</span> Small = Score 3-</div>
     <div class="legend-item"><span style="color:#f1c40f;font-size:14px">&#9711;</span> Gold border = Active opening</div>
+    <div class="legend-item" style="margin-top:6px;font-weight:600;font-size:11px">Insurance Groups:</div>
+    <div class="legend-item" style="font-size:11px"><span style="color:#27ae60">&#9632;</span> A-C: Benefits likely (FT)</div>
+    <div class="legend-item" style="font-size:11px"><span style="color:#e67e22">&#9632;</span> D,H: Benefits vary</div>
+    <div class="legend-item" style="font-size:11px"><span style="color:#c0392b">&#9632;</span> E-G: No benefits</div>
   </div>
 </div>
 
@@ -295,11 +315,16 @@ function initMap(prospects) {
     const scoreClass = 'score-' + p.fitScore;
     const whomClass = 'for-' + p.forWhom.toLowerCase();
 
+    const insClass = ['A','B','C'].includes(p.insuranceGroup) ? 'ins-benefits'
+      : ['D','H'].includes(p.insuranceGroup) ? 'ins-unlikely'
+      : p.insuranceGroup === 'X' ? 'ins-na' : 'ins-none';
+
     let popupHtml = `<div class="popup-content">
       <h3>${p.name}</h3>
       <div class="type">${p.type} — ${p.city}</div>
       <span class="score ${scoreClass}">Fit: ${p.fitScore}/5</span>
-      <span class="for-whom ${whomClass}">${p.forWhom}</span>`;
+      <span class="for-whom ${whomClass}">${p.forWhom}</span>
+      <span class="insurance ${insClass}">Group ${p.insuranceGroup}: ${p.insuranceLabel || ''}</span>`;
 
     if (p.website) {
       popupHtml += `<div class="website"><a href="${p.website}" target="_blank">${p.website}</a></div>`;
@@ -341,6 +366,7 @@ function initMap(prospects) {
   function applyFilters() {
     const checkedWhom = [...document.querySelectorAll('.filter-whom:checked')].map(c => c.value);
     const checkedScores = [...document.querySelectorAll('.filter-score:checked')].map(c => parseInt(c.value));
+    const checkedIns = [...document.querySelectorAll('.filter-ins:checked')].map(c => c.value);
     const activeOnly = document.getElementById('filter-active').checked;
 
     let visible = 0;
@@ -348,6 +374,7 @@ function initMap(prospects) {
       const p = m._prospectData;
       const show = checkedWhom.includes(p.forWhom)
         && checkedScores.includes(p.fitScore)
+        && checkedIns.includes(p.insuranceGroup || 'X')
         && (!activeOnly || p.activeOpening);
 
       if (show) {
@@ -362,7 +389,7 @@ function initMap(prospects) {
       `Showing ${visible} of ${prospects.length} prospects | ${activeCount} with active openings`;
   }
 
-  document.querySelectorAll('.filter-whom, .filter-score, #filter-active').forEach(el => {
+  document.querySelectorAll('.filter-whom, .filter-score, .filter-ins, #filter-active').forEach(el => {
     el.addEventListener('change', applyFilters);
   });
 
